@@ -29,7 +29,7 @@ app.post("/cache", (req, res) => {
   }
 
   cache.set(key, value);
-  res.status(201).json({ message: "Item added to cache" }, key, value);
+  res.status(201).json({ message: "Key added to cache successfully" });
 });
 
 // GET Request /cache/:key -> Retrieves the value for a key
@@ -59,7 +59,7 @@ app.delete("/cache/:key", (req, res) => {
 
   if (cache.has(key)) {
     cache.delete(key);
-    return res.status(200).json({ message: "Key deleted" });
+    return res.status(200).json({ message: "Key deleted successfully" });
   } else {
     return res.status(404).json({ message: "Key not found" });
   }

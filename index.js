@@ -4,9 +4,11 @@ const cors = require("cors");
 
 dotenv.config();
 
+// Express App
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
